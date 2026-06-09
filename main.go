@@ -10,6 +10,8 @@ func main() {
 	
 	var router gin.Engine = *gin.Default()
 
+	router.SetTrustedProxies(nil)
+
 	// we will use the router here 
 	router.POST("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
