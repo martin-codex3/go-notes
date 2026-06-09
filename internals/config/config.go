@@ -7,25 +7,24 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// we will attempt to load the .env file here
-type DatabaseConfig struct {
+
+type Config struct {
 	DatabaseUrl string
 	Port string
 }
 
+func Load() (*Config, error) {
 
-func Load() (*DatabaseConfig, error) {
-	var err error = godotenv.Load(".env")
+	var err error = godotenv.Load()
 
 	if err != nil {
-		log.Fatal("Failed to load the envronment variable")
+		log.Println("Failed to load the envronment variables")
 	}
 
-	var config *DatabaseConfig = &DatabaseConfig{
+	config := &Config{
 		DatabaseUrl: os.Getenv("DATABASE_URL"),
 		Port: os.Getenv("PORT"),
 	}
 
 	return config, nil
-
 }
