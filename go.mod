@@ -35,3 +35,5 @@ require (
 	golang.org/x/text v0.37.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
+
+tool github.com/joho/godotenv/cmd/godotenv
