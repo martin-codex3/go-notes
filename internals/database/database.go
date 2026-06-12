@@ -29,9 +29,10 @@ func DatabaseConnect (DatabaseUrl string) (*pgxpool.Pool, error) {
 	pool, err = pgxpool.NewWithConfig(ctx, cfg)
 
 	if err != nil {
-		log.Printf("Failed to create the database pool")
+		log.Fatal("Failed to create the database pool")
 		return nil, err
 	}
 
 	// we will then have to return the pool here 
+	return pool, nil
 }
