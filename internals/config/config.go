@@ -7,21 +7,24 @@ import (
 	"github.com/joho/godotenv"
 )
 
-
-type Config struct {
+// we first lead the envroment variables here
+type DatabaseEnvronment struct {
 	DatabaseUrl string
 	Port string
 }
 
-func Load() (*Config, error) {
-
+// the function to load the envronment variables here
+func Load() (*DatabaseEnvronment, error) {
+	
+	// we will load the envronment variables here 
 	var err error = godotenv.Load()
 
 	if err != nil {
-		log.Println("Failed to load the envronment variables")
+		log.Printf("Failed to load the envronment variables")
 	}
 
-	config := &Config{
+	// we will have to pass the variables to the config variable
+	var config *DatabaseEnvronment = &DatabaseEnvronment{
 		DatabaseUrl: os.Getenv("DATABASE_URL"),
 		Port: os.Getenv("PORT"),
 	}
