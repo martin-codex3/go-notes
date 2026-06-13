@@ -53,6 +53,10 @@ func main() {
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
 			"message": "Testing the database connection",
+			"status": "success",
 		})
 	})
+
+	// we will then run the server 
+	router.Run()
 }
