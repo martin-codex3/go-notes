@@ -1,3 +1,5 @@
+github.com/DavidHuie/gomigrate v0.0.0-20190826182718-4adc4b3de142 h1:pfeJevnIXt4KJShhkTp8uRU0evDkRaFkAdmaNmzHMIQ=
+github.com/DavidHuie/gomigrate v0.0.0-20190826182718-4adc4b3de142/go.mod h1:F3GZLX+VN44AjFiyKD8++nq8sVE0Sw3bOhhQ3mUffnM=
 github.com/bytedance/gopkg v0.1.4 h1:oZnQwnX82KAIWb7033bEwtxvTqXcYMxDBaQxo5JJHWM=
 github.com/bytedance/gopkg v0.1.4/go.mod h1:v1zWfPm21Fb+OsyXN2VAHdL6TBb2L88anLQgdyje6R4=
 github.com/bytedance/sonic v1.15.2 h1:90H+rcF/FwLXwfB1cudOLq/je83n683Utf4Cbp0xHCo=
